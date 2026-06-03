@@ -1,0 +1,29 @@
+# ── Core Framework ────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9        # required for file uploads
+
+# ── LangChain ecosystem ───────────────────────────────────────────────────────
+langchain==0.2.1
+langchain-community==0.2.1
+langchain-openai==0.1.7        # optional: OpenAI LLM + embeddings
+
+# ── Vector store ──────────────────────────────────────────────────────────────
+faiss-cpu==1.8.0               # use faiss-gpu if CUDA is available
+
+# ── Embeddings (local, no API key needed) ────────────────────────────────────
+sentence-transformers==3.0.1
+torch==2.3.0                   # CPU build; remove version pin for GPU
+
+# ── Document loaders ──────────────────────────────────────────────────────────
+pypdf==4.2.0                   # PDF loading
+unstructured==0.14.0           # optional: advanced document parsing
+
+# ── LLM (local fallback) ──────────────────────────────────────────────────────
+ollama==0.2.1                  # requires Ollama server running locally
+
+# ── Data / utilities ──────────────────────────────────────────────────────────
+pydantic==2.7.1
+python-dotenv==1.0.1           # load .env for OPENAI_API_KEY etc.
+tqdm==4.66.4
+numpy==1.26.4
